@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<!--当前pom版本-->
+	<modelVersion>4.0.0</modelVersion>
+	<!--父项目-->
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.1.16.RELEASE</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+
+	<!--基础配置-->
+	<!--公司或组织唯一id，install后jar包生成路径-->
+	<groupId>com.dict</groupId>
+	<!--项目id，一个groupId下可以有多个artifactId-->
+	<artifactId>springboot-hello</artifactId>
+	<!--当前版本号-->
+	<version>0.0.1-SNAPSHOT</version>
+	<!--项目名称，非必须项，一般用于maven生成文档-->
+	<name>springboot-hello</name>
+	<!--打包机制，默认为jar-->
+	<packaging>jar</packaging>
+
+	<!--项目信息-->
+	<!--项目详细描述，一般用于maven生成文档-->
+	<description>Demo project for Spring Boot</description>
+	<!--其他标签有：url，inceptionYear，licenses，organization，developers等项目相关信息-->
+
+
+	<!--定义常量，在其他地方可以通过${xxx}引用-->
+	<properties>
+		<java.version>1.8</java.version>
+	</properties>
+
+	<!--依赖配置-->
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
